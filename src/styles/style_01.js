@@ -34,7 +34,7 @@ import {StyleSheet} from 'react-native';
       itemContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#DCDDEF', 
+        backgroundColor: '#365DAA',
         borderRadius: 10, 
         padding: 10, 
         marginVertical: 5, 
@@ -59,7 +59,8 @@ import {StyleSheet} from 'react-native';
       pokemonName: {
         marginLeft: 10,
         fontSize: 18,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: '#FFCB03',
       },
            
         });
