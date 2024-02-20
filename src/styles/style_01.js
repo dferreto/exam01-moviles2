@@ -31,6 +31,37 @@ import {StyleSheet} from 'react-native';
         color: '#FFCB03',
         justifyContent: 'flex-start'
       },
+
+      itemContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#DCDDEF', 
+        borderRadius: 10, 
+        padding: 10, 
+        marginVertical: 5, 
+        marginHorizontal: 10, 
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5, 
+      },
+
+      pokemonImage: {
+        width: 100,
+        height: 70,
+        borderRadius: 25, 
+        marginRight: 10, 
+      },
+
+      pokemonName: {
+        marginLeft: 10,
+        fontSize: 18,
+        fontWeight: 'bold'
+      },
            
         });
 	
