@@ -16,14 +16,13 @@ import {StyleSheet} from 'react-native';
       },
       title1: {
         fontSize: 24,
-        fontWeight: 'bold',
         marginTop: 10, // Ajusta el espacio si es necesario
         textAlign: 'center'
       },
       navBar: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        paddingVertical: 2, // Ajusta el espacio vertical si es necesario
+        paddingVertical: 3, // Ajusta el espacio vertical si es necesario
         backgroundColor: '#365DAA', // Ajusta el color de fondo si es necesario
       },
       navItem: {
