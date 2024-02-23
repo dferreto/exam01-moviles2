@@ -41,9 +41,9 @@ const Home = ({ navigation }) => {
 
   const renderPokemonItem = ({ item }) => (
     <TouchableOpacity
-      style={style_01.itemContainer}
-      onPress={() => navigation.navigate('PokeDetail', { pokemon: item })}
-    >
+    style={style_01.itemContainer}
+    onPress={() => navigation.navigate('PokeDetail', { pokemonId: item.name.toUpperCase() })} 
+  >
       <Image
         source={{ uri: `https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/${item.name}.png` }}
         style={style_01.pokemonImage}

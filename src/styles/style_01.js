@@ -4,26 +4,26 @@ import {StyleSheet} from 'react-native';
 
       container: {
         flex: 1,
-        backgroundColor: '#fff', // El color de fondo puede ser ajustado
+        backgroundColor: '#fff', 
       },
       header: {
         alignItems: 'center',
         padding: 20,
       },
       logoPM: {
-        height: 100, // Ajusta el tamaño según sea necesario
-        resizeMode: 'contain', // Esto asegura que el logo se ajuste al tamaño sin perder la proporción
+        height: 100, 
+        resizeMode: 'contain', 
       },
       title1: {
         fontSize: 24,
-        marginTop: 10, // Ajusta el espacio si es necesario
+        marginTop: 10, 
         textAlign: 'center'
       },
       navBar: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        paddingVertical: 3, // Ajusta el espacio vertical si es necesario
-        backgroundColor: '#365DAA', // Ajusta el color de fondo si es necesario
+        paddingVertical: 3,
+        backgroundColor: '#365DAA', 
       },
       navItem: {
         fontSize: 14,
@@ -63,5 +63,5 @@ import {StyleSheet} from 'react-native';
         color: '#FFCB03',
       },
            
-        });
+});
 	
