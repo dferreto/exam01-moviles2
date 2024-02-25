@@ -3,7 +3,7 @@ import { SafeAreaView, ScrollView, View, Image, Text } from 'react-native';
 import { style_02 } from '../styles/style_02';
 
 const PokeDetail = ({ route }) => {
-  const { pokemonId } = route.params; // Asegúrate de pasar 'pokemonId' al navegar hacia este componente
+  const { pokemonId } = route.params; 
   const [pokemonDetails, setPokemonDetails] = useState(null);
   const [setIsLoading] = useState(true);
 
