@@ -6,25 +6,30 @@ import {StyleSheet} from 'react-native';
         flex: 1,
         backgroundColor: '#fff', 
       },
+
       header: {
         alignItems: 'center',
         padding: 20,
       },
+
       logoPM: {
         height: 100, 
         resizeMode: 'contain', 
       },
+
       title1: {
         fontSize: 24,
         marginTop: 10, 
         textAlign: 'center'
       },
+
       navBar: {
         flexDirection: 'row',
         justifyContent: 'space-around',
         paddingVertical: 3,
         backgroundColor: '#365DAA', 
       },
+
       navItem: {
         fontSize: 14,
         color: '#FFCB03',
@@ -61,7 +66,6 @@ import {StyleSheet} from 'react-native';
         fontSize: 18,
         fontWeight: 'bold',
         color: '#FFCB03',
-      },
-           
+      },    
 });
 	

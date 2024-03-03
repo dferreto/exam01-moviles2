@@ -1,27 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import { SafeAreaView, ScrollView, View, Image, Text } from 'react-native';
-import { style_02 } from '../styles/style_02';
+import React, {useState, useEffect} from 'react';
+import {SafeAreaView, ScrollView, View, Image, Text} from 'react-native';
+import {style_02} from '../styles/style_02';
 
-const PokeDetail = ({ route }) => {
-  const { pokemonId } = route.params; 
+const PokeDetail = ({route}) => {
+  const {pokemonId} = route.params;
   const [pokemonDetails, setPokemonDetails] = useState(null);
-  const [setIsLoading] = useState(true);
 
   useEffect(() => {
     const obtenerPokemonDetails = async () => {
       try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId.toLowerCase()}`);
+        const response = await fetch(
+          `https://pokeapi.co/api/v2/pokemon/${pokemonId.toLowerCase()}`,
+        );
         const data = await response.json();
         setPokemonDetails(data);
       } catch (error) {
         console.error('Error al obtener los detalles del Pokémon:', error);
-      } finally {
-        setIsLoading(false);
       }
     };
 
     obtenerPokemonDetails();
   }, [pokemonId]);
+
+  const getTypeDesign = typeElement => {
+    switch (typeElement) {
+      case 'fire':
+        return style_02.typeFire;
+      case 'water':
+        return style_02.typeWater;
+      default:
+        return {};
+    }
+  };
 
   return (
     <SafeAreaView style={style_02.container}>
@@ -36,38 +46,50 @@ const PokeDetail = ({ route }) => {
         {pokemonDetails && (
           <View style={style_02.detailContainer}>
             <View style={style_02.detailContainer2}>
-            <Image
-              source={{ uri: pokemonDetails.sprites.front_default }}
-              style={style_02.pokemonImage}
-            />
-            <Text style={style_02.pokemonName}>{pokemonDetails.name.toUpperCase()}</Text>
-            <Text style={style_02.feature}>Features:</Text>
-            <Text>- Code:{pokemonDetails.id.toString().padStart(3)}</Text>
-            <Text>- Height: {pokemonDetails.height}</Text>
-            <Text>- Weight: {pokemonDetails.weight}</Text>
+              <Image
+                source={{uri: pokemonDetails.sprites.front_default}}
+                style={style_02.pokemonImage}
+              />
+              <View style={style_02.textContainer}>
+                <Text style={style_02.pokemonName}>
+                  {pokemonDetails.name.toUpperCase()}
+                </Text>
+                <Text style={style_02.feature}>Features:</Text>
+                <Text style={style_02.pokemonDetail}>
+                  - Code: #{pokemonDetails.id}
+                </Text>
+                <Text style={style_02.pokemonDetail}>
+                  - Height: {pokemonDetails.height}
+                </Text>
+                <Text style={style_02.pokemonDetail}>
+                  - Weight: {pokemonDetails.weight}
+                </Text>
+              </View>
             </View>
             <View style={style_02.typeContainer}>
               <Text style={style_02.typeTitle}>Types to Belong</Text>
-              {pokemonDetails.types.map((typeEntry) => (
-                <Text key={typeEntry.type.name} style={style_02.typeText}>
-                  {typeEntry.type.name.toUpperCase()}
+              {pokemonDetails.types.map(typeEntry => (
+                <Text
+                  key={typeEntry.type.name}
+                  style={[
+                    style_02.typeText,
+                    getTypeDesign(typeEntry.type.name),
+                  ]}>
+                  {typeEntry.type.name.charAt(0).toUpperCase() +
+                    typeEntry.type.name.slice(1).toLowerCase()}
                 </Text>
               ))}
             </View>
-        <View style={style_02.moveContainer}>
-              <Text style={style_02.moveTitle}>Movimientos</Text>
+            <View style={style_02.moveContainer}>
+              <Text style={style_02.moveTitle}>Movements</Text>
               {pokemonDetails.moves.map((moveEntry, index) => (
                 <Text key={index} style={style_02.moveText}>
                   {moveEntry.move.name}
                 </Text>
               ))}
             </View>
-            
           </View>
-          
-          
         )}
-       
       </ScrollView>
     </SafeAreaView>
   );

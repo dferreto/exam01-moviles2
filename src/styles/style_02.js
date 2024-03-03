@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export const style_02 = StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -8,72 +9,112 @@ export const style_02 = StyleSheet.create({
   header: {
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#f8f8f8',
   },
   logoPM: {
     height: 100, 
     resizeMode: 'contain',
   },
+  
   detailContainer: {
     alignItems: 'center',
     padding: 20,
+    
   },
+
   detailContainer2: {
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'flex-start', 
     padding: 20,
-    backgroundColor: '#30A7D7',
+    backgroundColor: '#FFDE00',
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
-    width: '90%',
+    width: '100%',
+    borderWidth: 3,
+    borderColor: '#365DAA',
   },
+  
+  textContainer: {
+    flex: 1, 
+    marginLeft: 10, 
+  },
+  
   pokemonImage: {
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 150,
     resizeMode: 'contain',
      flexDirection: 'row', 
   },
   title1: {
     fontSize: 24,
     marginTop: 10, 
-    textAlign: 'center'
+    textAlign: 'center',
+    backgroundColor: '#365DAA',
+    color: 'white'
     },
     
-    infoBox: {
+  infoBox: {
         flex: 1,
         padding: 10,
       },
-      pokemonName: {
+
+  pokemonName: {
         fontSize: 22,
         fontWeight: 'bold',
         color: '#000000', 
         marginBottom: 5,
       },
+
+  pokemonDetail: {
+    color: 'black'
+  },
+
   typeContainer: {
+    marginTop: 20,
     flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'center',
     marginVertical: 8,
+    width: '90%',
+    backgroundColor: '#F0F0F0',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    
   },
+
   typeTitle: {
     fontSize: 18,
     fontWeight: 'bold',
+    backgroundColor: '#FFDE00',
+    padding: 8,
+    width: '100%',
+    textAlign: 'center',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    borderWidth: 3,  
+    borderColor: '#365DAA', 
   },
+  
   typeText: {
-    fontSize: 16,
-    marginHorizontal: 4,
-    paddingVertical: 4,
+    fontSize: 17,
+    marginTop: 10,
+    marginHorizontal: 4, 
+    paddingVertical: 2,
     paddingHorizontal: 10,
     backgroundColor: '#FFDE00',
     borderRadius: 20,
     overflow: 'hidden',
     textAlign: 'center',
-    marginVertical: 4,
+    marginVertical: 10,
   },
+
   moveContainer: {
     width: '90%',
     marginTop: 20,
   },
+
   moveTitle: {
     fontSize: 18,
     fontWeight: 'bold',
@@ -83,7 +124,10 @@ export const style_02 = StyleSheet.create({
     textAlign: 'center',
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
+    borderWidth: 3,  
+    borderColor: '#365DAA', 
   },
+
   moveText: {
     fontSize: 16,
     backgroundColor: '#F0F0F0',
@@ -92,19 +136,37 @@ export const style_02 = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: '#DDDDDD',
   },
+
   centered: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
+
   feature: {
     fontSize: 16,
     color: '#000000', 
     marginTop: 2,
     fontWeight: 'bold',
-    
   },
-  
+
+  typeFire: {
+    backgroundColor: '#FD7D24',
+    color: 'white',
+    borderWidth: 3,  
+    borderColor: '#DF6F1F', 
+  },
+
+  typeWater: {
+    backgroundColor: '#4592C4',
+    color: 'white',
+    borderWidth: 3,  
+    borderColor: '#3A7AA2', 
+  },
+
+  typeElectric: {
+    backgroundColor: '#EED535'
+  }
   
 });
 
