@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {SafeAreaView, ScrollView, View, Image, Text} from 'react-native';
 import {style_02} from '../styles/style_02';
+import {pokeTypes} from '../styles/pokeTypes';
 
 
 const PokeDetail = ({route}) => {
@@ -26,19 +27,39 @@ const PokeDetail = ({route}) => {
   const getTypeDesign = typeElement => {
     switch (typeElement) {
       case 'fire':
-        return style_02.typeFire;
+        return pokeTypes.typeFire;
       case 'water':
-        return style_02.typeWater;
+        return pokeTypes.typeWater;
       case 'electric':
-        return style_02.typeElectric;
+        return pokeTypes.typeElectric;
       case 'grass':
-        return style_02.typeGrass;
+        return pokeTypes.typeGrass;
       case 'poison':
-        return style_02.typePoison;
+        return pokeTypes.typePoison;
       case 'flying':
-        return style_02.typeFlying;
+        return pokeTypes.typeFlying;
       case 'bug':
-        return style_02.typeBug;
+        return pokeTypes.typeBug;
+      case 'ground':
+        return pokeTypes.typeGround;
+      case 'fairy':
+        return pokeTypes.typeFairy;
+      case 'fighting':
+        return pokeTypes.typeFighting;
+      case 'psychic':
+        return pokeTypes.typePsychic;
+      case 'rock':
+        return pokeTypes.typeRock;
+      case 'steel':
+        return pokeTypes.typeSteel;
+      case 'ice':
+        return pokeTypes.typeIce;
+      case 'ghost':
+        return pokeTypes.typeGhost;
+      case 'dragon':
+        return pokeTypes.typeDragon;
+      case 'dark':
+        return pokeTypes.typeDark;
       default:
         return style_02.typeNormal;
     }
