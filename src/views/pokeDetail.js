@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {SafeAreaView, ScrollView, View, Image, Text} from 'react-native';
 import {style_02} from '../styles/style_02';
 
+
 const PokeDetail = ({route}) => {
   const {pokemonId} = route.params;
   const [pokemonDetails, setPokemonDetails] = useState(null);
@@ -28,8 +29,18 @@ const PokeDetail = ({route}) => {
         return style_02.typeFire;
       case 'water':
         return style_02.typeWater;
+      case 'electric':
+        return style_02.typeElectric;
+      case 'grass':
+        return style_02.typeGrass;
+      case 'poison':
+        return style_02.typePoison;
+      case 'flying':
+        return style_02.typeFlying;
+      case 'bug':
+        return style_02.typeBug;
       default:
-        return {};
+        return style_02.typeNormal;
     }
   };
 

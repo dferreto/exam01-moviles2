@@ -165,9 +165,51 @@ export const style_02 = StyleSheet.create({
   },
 
   typeElectric: {
-    backgroundColor: '#EED535'
+    backgroundColor: '#EED535',
+    color: 'black',
+    borderWidth: 3, 
+    borderColor: '#D0BA2E', 
+  },
+
+  typeNormal: {
+    backgroundColor: '#A4ACAF',
+    color: 'black',
+    borderWidth: 3, 
+    borderColor: '#8A9093', 
+  },
+
+  typeGrass: {
+    backgroundColor: '#9BCC50',
+    color: 'black',
+    borderWidth: 3, 
+    borderColor: '#84AF44', 
+  },
+
+  typePoison: {
+    backgroundColor: '#B97FC9',
+    color: 'white',
+    borderWidth: 3, 
+    borderColor: '#9E6DAC', 
+  },
+
+  typeFlying: {
+    backgroundColor: '#A78EF1',
+    color: 'black',
+    borderWidth: 3, 
+    borderColor: '#947ED5', 
+    
+  },
+
+  typeBug: {
+    backgroundColor: '#719F3F',
+    color: 'white',
+    borderWidth: 3, 
+    borderColor: '#5D8134', 
+    
   }
+
   
+
 });
 
 export default style_02;
