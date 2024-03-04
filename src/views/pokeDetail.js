@@ -61,7 +61,7 @@ const PokeDetail = ({route}) => {
       case 'dark':
         return pokeTypes.typeDark;
       default:
-        return style_02.typeNormal;
+        return pokeTypes.typeNormal;
     }
   };
 
